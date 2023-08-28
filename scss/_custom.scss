@@ -8,10 +8,11 @@ $warning: #044b06;
 $success: #c9dfe7;
 $danger: #ff4d00;
 $black: #302c2c;
-$white: #fcfef7;
+$white: #f8f8f8;
 $creamWhite: #f7f2ed;
 $info: #808080;
 $new: #eff8fc;
+$bg-color: #c9dfe7;
 
 // Additional shades
 $primary-light: lighten($primary, 15%);
@@ -118,10 +119,14 @@ p {
 }
 
 .btn {
-    padding-top: 9px;
-    padding-bottom: 9px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
+// button, .btn{
+//     font-family: 'poppins', sans-serif;
+//     letter-spacing: 1px;
+// }
 
 .btn-primary {
     color: $white;
@@ -250,7 +255,7 @@ section {
 
 .header {
     font-size: 35px;
-    font-weight: 600;
+    font-weight: 700;
     position: relative;
     text-transform: capitalize;
     margin-bottom: 2rem;

@@ -1,6 +1,7 @@
 .nav-hero {
     position: relative;
     min-height: 100vh;
+    overflow: inherit;
     overflow-y: visible;
     --img-width: 33%;
     --info-width: 67%;
@@ -129,7 +130,7 @@
         width: 80%;
         padding: 2rem 3rem 2rem 10rem;
         position: relative;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
         .scrolldown-div {
             left: 4rem;
@@ -208,9 +209,9 @@
                 }
             }
 
-            img{
-                mix-blend-mode: multiply;   
-                filter: contrast(1);         
+            img {
+                mix-blend-mode: multiply;
+                filter: contrast(1);
                 width: 12rem;
                 object-fit: contain;
 
@@ -220,17 +221,19 @@
 }
 
 // Success Stories
-.success-stories{
+.success-stories {
     background-color: $success;
     position: relative;
     padding-bottom: 6rem;
-    .column{
+
+    .column {
         background-color: #fff;
-        border-radius: 12px;
+        border-radius: 0px;
         padding: 1.5rem 1.75rem;
         z-index: 3;
-        .img-div{
-            img{
+
+        .img-div {
+            img {
                 width: 5rem;
                 height: 5rem;
                 object-fit: cover;
@@ -239,12 +242,13 @@
             }
         }
 
-        .name{
+        .name {
             font-size: 19px;
             font-weight: 600;
             margin-top: 0.7rem;
         }
-        .background{
+
+        .background {
             font-size: 16px;
             font-weight: 500;
             margin-top: 0.3rem;
@@ -252,13 +256,13 @@
         }
     }
 
-    .stars{
+    .stars {
         font-size: 18px;
         margin-bottom: 0.6rem;
         color: #FF9529;
     }
 
-    .blob1{
+    .blob1 {
         position: absolute;
         width: 20rem;
         top: -20%;
@@ -266,7 +270,7 @@
         z-index: 1;
     }
 
-    .blob2{
+    .blob2 {
         position: absolute;
         width: 20rem;
         top: -20%;
@@ -275,14 +279,14 @@
         transform: rotate(45deg);
     }
 
-    .dotted-element1{
+    .dotted-element1 {
         position: absolute;
         top: 1rem;
         left: 25%;
         transform: rotate(90deg);
     }
 
-    .dotted-element2{
+    .dotted-element2 {
         position: absolute;
         bottom: 1rem;
         right: 25%;
@@ -298,48 +302,411 @@
         line-height: 0;
         transform: rotate(180deg);
     }
-    
+
     .custom-shape-divider-bottom-1692969009 svg {
         position: relative;
         display: block;
         width: calc(100% + 1.3px);
         height: 78px;
     }
-    
+
     .custom-shape-divider-bottom-1692969009 .shape-fill {
         fill: #F8F8F8;
     }
 }
 
 // Services
-.services{
-    .flex{
-      display:grid;
-      grid-template-columns: repeat(2, 1fr);
+.services {
+    .flex {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 3rem;
         align-items: center;
 
-        .info-side{
+        .info-side {}
 
-        }
-
-        .service-side{
+        .service-side {
             display: flex;
             align-items: center;
             gap: 3rem;
 
-            .service{
+            .service {
                 background-color: #ffffff;
                 padding: 2rem 1.4rem;
                 box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-                border-radius: 8px;
-                .img-div{
+                border-radius: 0px;
+
+                .img-div {
                     margin-bottom: 1rem;
-                    img{
+
+                    img {
                         width: 5rem;
                     }
                 }
             }
+        }
+    }
+}
+
+// Social Media
+.social-media {
+    position: relative;
+    background-color: #c9dfe7;
+    padding: 2rem 0;
+
+    .flex {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding: 2rem 0;
+
+        .column {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            height: auto;
+            z-index: 2;
+            background-color: $white;
+
+            .img-div {
+                background-color: $dark;
+                position: relative;
+                height: 7rem;
+
+                .img-bg {
+                    position: absolute;
+                    width: 7rem;
+                    height: 7rem;
+                    border-radius: 50%;
+                    padding: 1.1rem;
+                    top: 38%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $white !important;
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+                    img {
+                        width: 80%;
+                    }
+                }
+
+                .lines {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    height: 100%;
+                    margin: auto;
+                    width: 100%;
+
+                    .line {
+                        position: absolute;
+                        width: 2px;
+                        height: 100%;
+                        top: 0;
+                        left: 50%;
+                        background: rgba(255, 255, 255, 0.1);
+                        overflow: hidden;
+
+                        &::after {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            height: 100%;
+                            width: 100%;
+                            top: -50%;
+                            left: 0;
+                            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+                            animation: drop 7s 0s infinite;
+                            animation-fill-mode: forwards;
+                            animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+                        }
+
+                        &:nth-child(1) {
+                            margin-left: -25%;
+
+                            &::after {
+                                animation-delay: 2s;
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            margin-left: 25%;
+
+                            &::after {
+                                animation-delay: 2.5s;
+                            }
+                        }
+                    }
+
+                    @keyframes drop {
+                        0% {
+                            top: -50%;
+                        }
+
+                        100% {
+                            top: 110%;
+                        }
+                    }
+                }
+            }
+
+            .info-section {
+                padding: 3rem 2rem 1rem;
+                text-align: center;
+
+                .followers {
+                    font-weight: 700;
+                    font-size: 22px;
+                    color: $dark;
+
+                    span {
+                        color: #45a0c2;
+                    }
+
+                    margin-bottom: 1rem;
+                }
+
+                a {
+                    padding-top: 2rem;
+                    text-decoration: underline !important;
+                }
+            }
+
+            &:nth-of-type(1) {
+                .img-bg {
+                    background-color: #8B9DC3;
+                }
+            }
+
+            &:nth-of-type(2) {
+                .img-bg {
+                    background-color: #E5919E;
+                }
+            }
+
+            &:nth-of-type(3) {
+                .img-bg {
+                    background-color: #A7C9E7;
+                }
+            }
+
+        }
+    }
+
+    .custom-shape-divider-bottom-1693219230 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+        z-index: 1;
+    }
+
+    .custom-shape-divider-bottom-1693219230 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 295px;
+        transform: rotateY(180deg);
+    }
+
+    .custom-shape-divider-bottom-1693219230 .shape-fill {
+        fill: #F8F8F8;
+    }
+}
+
+// Online Courses
+.online-courses {
+
+    // background-color:#cce7e981;
+    .flex {
+        display: flex;
+        gap: 2rem;
+
+        .nav {
+            width: 30%;
+            gap: 1rem;
+
+            button {
+                font-size: 22px;
+                font-weight: 600;
+                border-radius: 0px;
+                min-height: 100px;
+
+                &:nth-of-type(1) {
+                    border-left: 5px solid #E5919E;
+                }
+
+                &:nth-of-type(2) {
+                    border-left: 5px solid #8B9DC3;
+                }
+
+                &:nth-of-type(3) {
+                    border-left: 5px solid #A7C9E7;
+                }
+
+                &:nth-of-type(4) {
+                    border-left: 5px solid #FFC857;
+                }
+            }
+        }
+
+        .tab-content {
+            padding-top: 1rem;
+            font-size: 17px;
+
+            .tab-pane {
+                .flex {
+                    display: flex;
+
+                    .info-side {
+                        width: 70%;
+                    }
+
+                    .img-side {
+                        width: 30%;
+                        height: 100%;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.email-signup {
+    .input-group {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        height: 60px;
+
+        .input-group-text {
+            background-color: $primary;
+            color: $white;
+            font-size: 18px;
+            font-weight: 600;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+
+    @mixin sp-layout {
+        @media screen and (max-width: 750px) {
+            @content;
+        }
+    }
+
+    @function random_range($min, $max) {
+        $rand: random();
+        $random_range: $min +floor($rand * (($max - $min) + 1));
+        @return $random_range;
+    }
+
+    .stars {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 120%;
+        transform: rotate(-45deg);
+    }
+
+    .star {
+        $star-count: 50;
+        --star-color: var(--primary-color);
+        --star-tail-length: 6em;
+        --star-tail-height: 2px;
+        --star-width: calc(var(--star-tail-length) / 6);
+        --fall-duration: 9s;
+        --tail-fade-duration: var(--fall-duration);
+
+        position: absolute;
+        top: var(--top-offset);
+        left: 0;
+        width: var(--star-tail-length);
+        height: var(--star-tail-height);
+        color: var(--star-color);
+        background: linear-gradient(45deg, currentColor, transparent);
+        border-radius: 50%;
+        filter: drop-shadow(0 0 6px currentColor);
+        transform: translate3d(104em, 0, 0);
+        animation: fall var(--fall-duration) var(--fall-delay) linear infinite, tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
+
+        @include sp-layout {
+            // For mobile performance, tail-fade animation will be removed QAQ
+            animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
+        }
+
+        @for $i from 1 through $star-count {
+            &:nth-child(#{$i}) {
+                --star-tail-length: #{random_range(500em, 750em) / 100};
+                --top-offset: #{random_range(0vh, 10000vh) / 100};
+                --fall-duration: #{random_range(6000, 12000s) / 1000};
+                --fall-delay: #{random_range(0, 10000s) / 1000};
+            }
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: calc(var(--star-width) / -2);
+            width: var(--star-width);
+            height: 100%;
+            background: linear-gradient(45deg, transparent, currentColor, transparent);
+            border-radius: inherit;
+            animation: blink 2s linear infinite;
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    @keyframes fall {
+        to {
+            transform: translate3d(-30em, 0, 0);
+        }
+    }
+
+    @keyframes tail-fade {
+
+        0%,
+        50% {
+            width: var(--star-tail-length);
+            opacity: 1;
+        }
+
+        70%,
+        80% {
+            width: 0;
+            opacity: 0.4;
+        }
+
+        100% {
+            width: 0;
+            opacity: 0;
+        }
+    }
+
+    @keyframes blink {
+        50% {
+            opacity: 0.6;
         }
     }
 }
