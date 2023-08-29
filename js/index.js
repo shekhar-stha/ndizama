@@ -629,8 +629,6 @@ $(".success-slider").slick({
   slidesToShow: 3,
   arrows: false,
   dots: true,
-  centerMode: true,
-  centerPadding: '60px',
   responsive: [
     {
       breakpoint: 1200,
@@ -651,3 +649,42 @@ $(".success-slider").slick({
   ],
 });
 
+$(".course-slider").slick({
+  infinite: true,
+  slidesToShow: 4,
+  arrows: false,
+  dots: true,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ],
+});
+
+
+const showMoreButton = document.getElementById('show-more-ep');
+showMoreButton.addEventListener('click', () => {
+  const collapsedClass = 'collapsed';
+  const moreEp = document.getElementById('moreEp');
+  
+  if (showMoreButton.classList.contains(collapsedClass)) {
+    showMoreButton.innerText = 'Show More';
+  } else {
+    showMoreButton.innerText = 'Show Less';
+  }
+  
+  showMoreButton.classList.toggle(collapsedClass);
+});

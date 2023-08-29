@@ -222,7 +222,7 @@
 
 // Success Stories
 .success-stories {
-    background-color: $success;
+    background-color: $primary;
     position: relative;
     padding-bottom: 6rem;
 
@@ -281,7 +281,7 @@
 
     .dotted-element1 {
         position: absolute;
-        top: 1rem;
+        bottom: 1rem;
         left: 25%;
         transform: rotate(90deg);
     }
@@ -293,7 +293,7 @@
         transform: rotate(90deg);
     }
 
-    .custom-shape-divider-bottom-1692969009 {
+    .custom-shape-divider-bottom-1693280625 {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -303,32 +303,39 @@
         transform: rotate(180deg);
     }
 
-    .custom-shape-divider-bottom-1692969009 svg {
+    .custom-shape-divider-bottom-1693280625 svg {
         position: relative;
         display: block;
-        width: calc(100% + 1.3px);
-        height: 78px;
+        width: calc(184% + 1.3px);
+        height: 41px;
     }
 
-    .custom-shape-divider-bottom-1692969009 .shape-fill {
+    .custom-shape-divider-bottom-1693280625 .shape-fill {
         fill: #F8F8F8;
+    }
+
+
+    li.slick-active button {
+        background-color: $secondary
     }
 }
 
 // Services
 .services {
     .flex {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
         gap: 3rem;
         align-items: center;
 
-        .info-side {}
+        .info-side {
+            width: 100%;
+        }
 
         .service-side {
             display: flex;
             align-items: center;
             gap: 3rem;
+            position: relative;
 
             .service {
                 background-color: #ffffff;
@@ -343,6 +350,30 @@
                         width: 5rem;
                     }
                 }
+
+                &:hover {
+                    background-color: $primary;
+
+                    h3,
+                    p {
+                        color: $white;
+                    }
+
+                    .btn {
+                        background-color: $secondary;
+                    }
+                }
+            }
+
+            .square {
+                position: absolute;
+                width: 8rem;
+                height: 8rem;
+                border: 5px solid $primary;
+                top: 40%;
+                left: 43%;
+                animation: circle 7s linear infinite;
+                z-index: -1;
             }
         }
     }
@@ -351,234 +382,325 @@
 // Social Media
 .social-media {
     position: relative;
-    background-color: #c9dfe7;
-    padding: 2rem 0;
+    padding: 3rem 0;
 
     .flex {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-        padding: 2rem 0;
-
-        .column {
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            height: auto;
-            z-index: 2;
+        .row {
             background-color: $white;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: row;
+            // align-items: center;
+            width: 58%;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+            div {
+                width: fit-content;
+                flex: 1;
+            }
 
             .img-div {
-                background-color: $dark;
-                position: relative;
-                height: 7rem;
+                padding: 2rem;
+                width: 10rem;
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
-                .img-bg {
-                    position: absolute;
-                    width: 7rem;
-                    height: 7rem;
-                    border-radius: 50%;
-                    padding: 1.1rem;
-                    top: 38%;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    background-color: $white !important;
-                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                img {
+                    width: 4rem;
+                }
+            }
 
-                    img {
-                        width: 80%;
-                    }
+            .name-followers {
+                height: 100%;
+                text-align: center;
+                padding: 1rem 0 1rem 1rem;
+
+                p {
+                    font-size: 17px;
+                    font-weight: 600;
+                    padding-bottom: 1rem;
                 }
 
-                .lines {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    height: 100%;
-                    margin: auto;
-                    width: 100%;
+                h6 {
+                    text-align: center;
+                    font-size: 56px;
+                    font-weight: 900;
+                    line-height: 63px;
 
-                    .line {
-                        position: absolute;
-                        width: 2px;
-                        height: 100%;
-                        top: 0;
-                        left: 50%;
-                        background: rgba(255, 255, 255, 0.1);
-                        overflow: hidden;
-
-                        &::after {
-                            content: '';
-                            display: block;
-                            position: absolute;
-                            height: 100%;
-                            width: 100%;
-                            top: -50%;
-                            left: 0;
-                            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
-                            animation: drop 7s 0s infinite;
-                            animation-fill-mode: forwards;
-                            animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
-                        }
-
-                        &:nth-child(1) {
-                            margin-left: -25%;
-
-                            &::after {
-                                animation-delay: 2s;
-                            }
-                        }
-
-                        &:nth-child(3) {
-                            margin-left: 25%;
-
-                            &::after {
-                                animation-delay: 2.5s;
-                            }
-                        }
-                    }
-
-                    @keyframes drop {
-                        0% {
-                            top: -50%;
-                        }
-
-                        100% {
-                            top: 110%;
-                        }
+                    span {
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 20px;
                     }
                 }
             }
 
-            .info-section {
-                padding: 3rem 2rem 1rem;
-                text-align: center;
-
-                .followers {
-                    font-weight: 700;
-                    font-size: 22px;
-                    color: $dark;
-
-                    span {
-                        color: #45a0c2;
-                    }
-
-                    margin-bottom: 1rem;
-                }
-
-                a {
-                    padding-top: 2rem;
-                    text-decoration: underline !important;
-                }
+            .description {
+                width: 40%;
+                padding-left: 3rem;
+                padding-right: 3rem;
+                display: flex;
+                align-items: center;
             }
 
             &:nth-of-type(1) {
-                .img-bg {
-                    background-color: #8B9DC3;
+                .img-div {
+                    background: linear-gradient(135deg, #1877f2, #5fb3d4);
+                    animation: facebook 3s ease infinite;
+
+                    @keyframes facebook {
+                        0% {
+                            background-position: 0% 50%;
+                        }
+
+                        50% {
+                            background-position: 100% 50%;
+                            background: linear-gradient(115deg, #1877f2, #5fb3d4);
+                        }
+
+                        100% {
+                            background-position: 0% 50%;
+                        }
+                    }
+
                 }
             }
 
             &:nth-of-type(2) {
-                .img-bg {
-                    background-color: #E5919E;
+                margin-left: auto;
+
+                .img-div {
+                    background: linear-gradient(45deg, #feda77, #d62976, #962fbf, #4f5bd5);
+                    background-size: 300% 300%;
+                    animation: insta 5s linear infinite;
+
+                    @keyframes insta {
+                        0% {
+                            background-position: 0% 50%;
+                        }
+
+                        50% {
+                            background-position: 100% 50%;
+                        }
+
+                        100% {
+                            background-position: 0% 50%;
+                        }
+                    }
+
+
                 }
             }
 
             &:nth-of-type(3) {
-                .img-bg {
-                    background-color: #A7C9E7;
+                .img-div {
+                    background: linear-gradient(135deg, #1da1f2, #17a2f7, #13a2fb, #007aff);
+                    animation: twitter 4s ease infinite;
+
+                    @keyframes twitter {
+                        0% {
+                            background-position: 0% 50%;
+                        }
+
+                        50% {
+                            background-position: 100% 50%;
+                        }
+
+                        100% {
+                            background-position: 0% 50%;
+                        }
+                    }
+
+
                 }
             }
 
+            &:nth-of-type(4) {
+                margin-left: auto;
+
+                .img-div {
+                    background: linear-gradient(45deg, #2c2c2c, #292929);
+                    background-size: 200% 200%;
+                    animation: tiktok 5s linear infinite;
+                    background-color: #111;
+
+                    @keyframes tiktok {
+                        0% {
+                            background-position: 0% 50%;
+                        }
+
+                        60% {
+                            background-position: 100% 50%;
+                        }
+
+                        100% {
+                            background-position: 0% 50%;
+                        }
+                    }
+
+
+                }
+            }
         }
     }
 
-    .custom-shape-divider-bottom-1693219230 {
+    .bg-img {
         position: absolute;
-        bottom: 0;
-        left: 0;
         width: 100%;
-        overflow: hidden;
-        line-height: 0;
-        transform: rotate(180deg);
-        z-index: 1;
-    }
-
-    .custom-shape-divider-bottom-1693219230 svg {
-        position: relative;
-        display: block;
-        width: calc(100% + 1.3px);
-        height: 295px;
-        transform: rotateY(180deg);
-    }
-
-    .custom-shape-divider-bottom-1693219230 .shape-fill {
-        fill: #F8F8F8;
+        height: 100%;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        filter: brightness(30%);
     }
 }
 
-// Online Courses
-.online-courses {
-
-    // background-color:#cce7e981;
+.podcasts {
     .flex {
         display: flex;
-        gap: 2rem;
+        justify-content: space-between;
 
-        .nav {
-            width: 30%;
-            gap: 1rem;
+        .latest-episode {
+            width: 46%;
 
-            button {
-                font-size: 22px;
-                font-weight: 600;
-                border-radius: 0px;
-                min-height: 100px;
+            .thumb-div {
+                width: 100%;
 
-                &:nth-of-type(1) {
-                    border-left: 5px solid #E5919E;
+                img {
+                    width: 100%;
+                    height: 23rem;
+                    object-fit: contain;
                 }
+            }
 
-                &:nth-of-type(2) {
-                    border-left: 5px solid #8B9DC3;
-                }
+            .logos {
+                display: flex;
+                gap: 3rem;
 
-                &:nth-of-type(3) {
-                    border-left: 5px solid #A7C9E7;
+                img {
+                    width: 9rem;
                 }
+            }
 
-                &:nth-of-type(4) {
-                    border-left: 5px solid #FFC857;
-                }
+            .bg-text {
+                text-transform: capitalize;
+                font-size: 75px;
+                font-weight: 800;
+                color: $secondary-light;
+                position: absolute;
+                z-index: -1;
+                top: -1%;
             }
         }
 
-        .tab-content {
-            padding-top: 1rem;
-            font-size: 17px;
+        .last-episodes {
+            width: 50%;
 
-            .tab-pane {
-                .flex {
+            .episode {
+                display: flex;
+                border: 3px solid #383838;
+                padding: 1rem;
+                gap: 1rem;
+                margin-bottom: 1rem;
+
+                .img-div {
+                    flex: 1;
+
+                    img {
+                        width: 12rem;
+                        height: 100%;
+                    }
+                }
+
+                .info-div {
                     display: flex;
+                    gap: 0.6rem;
+                    padding: 1rem 0;
 
-                    .info-side {
-                        width: 70%;
+                    .ep-number {
+                        font-weight: 600;
+                        color: $secondary;
+                        margin-bottom: 0.6rem;
                     }
 
-                    .img-side {
-                        width: 30%;
-                        height: 100%;
+                    h6 {
+                        font-size: 22px;
+                        font-weight: 700;
+                        color: #383838;
+                    }
 
-                        img {
-                            width: 100%;
-                            height: 100%;
+                    .description {
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+
+                    div {
+                        a {
+                            background-color: $secondary;
+                            font-size: 18px;
+                            padding: 0.8rem 1rem;
+                            color: $white;
+
+                            &:hover {
+                                i {
+                                    padding-left: none !important;
+                                }
+                            }
                         }
                     }
                 }
             }
         }
+    }
+}
+
+// Course Slider
+.courses {
+    padding: 4rem 0;
+    position: relative;
+    .column {
+        width: 100%;
+        text-align: center;
+        .img-div {
+            width: 100%;
+            margin-bottom: 3rem;
+            position: relative;
+            img {
+                width: 90%;
+                margin: 0 auto;
+                height: 20rem;
+                object-fit: contain;
+            }
+
+            .blob{
+                svg{
+                    position: absolute;
+                    width: 120%;
+                    bottom: -20%;
+                    left: -10%;
+                    z-index: -1;
+                }
+            }
+        }
+
+        .name{
+            font-size: 26px;
+            color: $white;
+            font-weight: 600;
+        }
+    }
+
+    .bg-img{
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        filter: brightness(30%);
     }
 }
 
@@ -600,115 +722,6 @@
         }
     }
 
-    @mixin sp-layout {
-        @media screen and (max-width: 750px) {
-            @content;
-        }
-    }
-
-    @function random_range($min, $max) {
-        $rand: random();
-        $random_range: $min +floor($rand * (($max - $min) + 1));
-        @return $random_range;
-    }
-
-    .stars {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 120%;
-        transform: rotate(-45deg);
-    }
-
-    .star {
-        $star-count: 50;
-        --star-color: var(--primary-color);
-        --star-tail-length: 6em;
-        --star-tail-height: 2px;
-        --star-width: calc(var(--star-tail-length) / 6);
-        --fall-duration: 9s;
-        --tail-fade-duration: var(--fall-duration);
-
-        position: absolute;
-        top: var(--top-offset);
-        left: 0;
-        width: var(--star-tail-length);
-        height: var(--star-tail-height);
-        color: var(--star-color);
-        background: linear-gradient(45deg, currentColor, transparent);
-        border-radius: 50%;
-        filter: drop-shadow(0 0 6px currentColor);
-        transform: translate3d(104em, 0, 0);
-        animation: fall var(--fall-duration) var(--fall-delay) linear infinite, tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
-
-        @include sp-layout {
-            // For mobile performance, tail-fade animation will be removed QAQ
-            animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
-        }
-
-        @for $i from 1 through $star-count {
-            &:nth-child(#{$i}) {
-                --star-tail-length: #{random_range(500em, 750em) / 100};
-                --top-offset: #{random_range(0vh, 10000vh) / 100};
-                --fall-duration: #{random_range(6000, 12000s) / 1000};
-                --fall-delay: #{random_range(0, 10000s) / 1000};
-            }
-        }
-
-        &::before,
-        &::after {
-            position: absolute;
-            content: '';
-            top: 0;
-            left: calc(var(--star-width) / -2);
-            width: var(--star-width);
-            height: 100%;
-            background: linear-gradient(45deg, transparent, currentColor, transparent);
-            border-radius: inherit;
-            animation: blink 2s linear infinite;
-        }
-
-        &::before {
-            transform: rotate(45deg);
-        }
-
-        &::after {
-            transform: rotate(-45deg);
-        }
-    }
-
-    @keyframes fall {
-        to {
-            transform: translate3d(-30em, 0, 0);
-        }
-    }
-
-    @keyframes tail-fade {
-
-        0%,
-        50% {
-            width: var(--star-tail-length);
-            opacity: 1;
-        }
-
-        70%,
-        80% {
-            width: 0;
-            opacity: 0.4;
-        }
-
-        100% {
-            width: 0;
-            opacity: 0;
-        }
-    }
-
-    @keyframes blink {
-        50% {
-            opacity: 0.6;
-        }
-    }
 }
 
 
