@@ -254,16 +254,17 @@ section {
 
 .header {
     font-size: 45px;
-    font-weight: 900;
+    font-weight: 700;
     position: relative;
     text-transform: capitalize;
     margin-bottom: 2rem;
     text-align: center;
     // font-family: 'Abril Fatface', cursive;
-    letter-spacing: 2.7px;
-
-    span {
-        font-family: 'Montserrat', sans-serif;
+    mark {
+        font-weight: 900;
+        background-color: $secondary;
+        color: $white;
+        letter-spacing: 2.7px;
     }
 }
 
@@ -276,6 +277,10 @@ section {
         border-top: 4px solid $secondary;
         left: 0%;
         top: 47%;
+
+        @media (max-width: 992px) {
+            display: none;
+        }
     }
 
     &::after {
@@ -286,6 +291,10 @@ section {
         border-top: 4px solid $secondary;
         right: 0%;
         top: 47%;
+
+        @media (max-width: 992px) {
+            display: none;
+        }
     }
 }
 
