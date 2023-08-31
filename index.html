@@ -24,46 +24,18 @@
 </head>
 
 <body>
-    <!-- Top of the navbar -->
-    <!-- <div class="top-information bg-primary" data-aos="fade-up">
-        <div class="container py-3 d-flex align-items-center justify-content-md-between justify-content-center">
-            <div class="d-md-flex d-none align-items-center ms-5 me-5">
-                <a href="tel:+13176579806" title="phone number" class="text-white fw-500 fs-18">
-                    <i class="fa-solid fa-location-dot fs-20 me-1"></i>
-                    Indianapolis, Indiana
-                </a>
-            </div>
-
-            <div class="d-flex align-items-center ms-5 me-5">
-                <ul class="wrapper mb-0">
-                    <li class="icon facebook">
-                        <span class="tooltip">Facebook</span>
-                        <span><i class="fab fa-facebook-f"></i></span>
-                    </li>
-                    <li class="icon twitter">
-                        <span class="tooltip">Twitter</span>
-                        <span><i class="fab fa-twitter"></i></span>
-                    </li>
-                    <li class="icon instagram">
-                        <span class="tooltip">Instagram</span>
-                        <span><i class="fab fa-instagram"></i></span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div> -->
-    <section class="nav-hero position-relative ">
+    <section class="nav-hero position-relative mb-lg-5 mb-0">
         <nav class="navbar bg-transparent navbar-expand-lg">
             <div class="container">
                 <a data-aos="fade-right" title="Company Logo" class="navbar-brand" href="/index.html"><img
                         src="/img/logo-white.png" alt="Logo"></a>
 
-                <button class="btn d-xl-none" type="button" data-bs-toggle="offcanvas"
+                <button style="z-index: 10;" class="btn d-xl-none" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
-                    <i class="fa-solid fa-bars fs-24"></i>
+                    <i class="fa-solid fa-bars-staggered text-white fs-28"></i>
                 </button>
 
-                <div class="offcanvas-xl offcanvas-end w-100" tabindex="-1" id="offcanvasResponsive"
+                <div class="offcanvas-xl offcanvas-end" tabindex="-1" id="offcanvasResponsive"
                     aria-labelledby="offcanvasResponsiveLabel">
                     <div class="offcanvas-header bg-success">
 
@@ -74,7 +46,7 @@
                         <button type="button" class="btn-close btn-close-dark fs-20" data-bs-dismiss="offcanvas"
                             data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
                     </div>
-                    <div class="offcanvas-body w-100">
+                    <div class="offcanvas-body">
                         <ul data-aos="fade-left"
                             class="navbar-nav mb-xl-0 mb-3 d-flex justify-content-start flex-xl-row flex-column w-100 ps-xl-5 ms-xl-5">
                             <li class="nav-item me-xl-4">
@@ -91,9 +63,9 @@
                                     href="/residential-lawn-services-indianapolis.html">Training</a>
                             </li>
                         </ul>
-                        <button style="width: fit-content; z-index: 4;"
-                            class="changing-button bs-white rounded-0 fs-20 mt-xl-0 mt-4 ms-lg-4">
-                            <a style="min-width: 13rem" class="px-4" title="Call Now" href="tel:+13176579806">Call
+                        <button style="z-index: 4;"
+                            class="changing-button nav-button bs-white rounded-0 fs-20 mt-xl-0 mt-4 ms-xl-4">
+                            <a class="px-4" title="Call Now" href="tel:+13176579806">Call
                                 Now</a></button>
                     </div>
                 </div>
@@ -136,7 +108,7 @@
         <div class="circle">
 
         </div>
-        <div class="features">
+        <div class="features d-lg-block d-none">
             <a href="/index.html#services" class="position-absolute scrolldown-div">
                 <div class="scrolldown">
                     <div class="chevrons">
@@ -167,6 +139,31 @@
             </div>
         </div>
     </section>
+
+    <div class="features d-lg-none d-block">
+        <div class="container">
+            <div class="flex">
+                <div class="column">
+                    <div class="img-div"><img src="/img/suitcase.png" alt=""></div>
+                    <h2>Sales Training</h2>
+                    <p>Elevate your sales game with our dynamic training programs, designed to sharpen skills, boost
+                        conversions, and maximize revenue.</p>
+                </div>
+                <div class="column">
+                    <div class="img-div"><img src="/img/social.png" alt=""></div>
+                    <h2>Online Courses</h2>
+                    <p>Access our comprehensive online courses from anywhere, and deepen your expertise at your own pace
+                        with interactive learning.</p>
+                </div>
+                <div class="column">
+                    <div class="img-div"><img src="/img/workshop.png" alt=""></div>
+                    <h2>Private Workshops</h2>
+                    <p>Immerse yourself in exclusive workshops crafted for your team's unique needs, fostering
+                        collaboration and growth.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Logos Marquee -->
     <section class="marquee-section">
@@ -355,12 +352,6 @@
 
         <img class="dotted-element1" src="/img/dotted-div.png" alt="">
         <img class="dotted-element2 " src="/img/dotted-div.png" alt="">
-        <div class="custom-shape-divider-bottom-1693280625">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                preserveAspectRatio="none">
-                <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
-            </svg>
-        </div>
     </section>
 
     <section class="services py-3">
@@ -420,8 +411,8 @@
                             <a href="#" class="btn btn-primary rounded-0 fs-15 fw-600 py-1 px-2 mt-3">Call Now</a>
                         </div>
                     </div>
-                    <div>
-                        <div class="service mb-4">
+                    <div class="d-xl-block mb-4 d-md-flex gap-4">
+                        <div class="service col mb-md-0 mb-5">
                             <div class="img-div">
                                 <img src="/img/suitcase.png" alt="">
                             </div>
@@ -435,7 +426,7 @@
                             </div>
                         </div>
 
-                        <div class="service">
+                        <div class="service col">
                             <div class="img-div">
                                 <img src="/img/social.png" alt="">
                             </div>
@@ -456,7 +447,6 @@
     <!--Social Media  -->
     <section class="social-media">
         <div class="container">
-            <h3 class="header header-element text-white">Our Social Media</h3>
             <div class="flex">
                 <div class="row">
                     <a class="img-div">
@@ -519,7 +509,6 @@
     <!-- Podcast -->
     <section class="podcasts">
         <div class="container">
-            <h3 class="header header-element">Free Weekly Podcast</h3>
             <div class="flex">
                 <div class="latest-episode position-relative">
                     <h3 class="bg-text">PODCAST</h3>
@@ -656,7 +645,7 @@
     </section>
 
     <!-- Courses -->
-    <section class="courses">
+    <section class="courses mb-0">
         <div class="px-5">
             <h3 class="header pb-4 text-white header-element">Our Courses</h3>
             <div class="course-slider">
@@ -740,18 +729,21 @@
     </section>
 
     <!-- Email Signup -->
-    <section class="email-signup">
-        <div class="container">
-            <h3 class="header">Signup or Free 5 Day Sales Success Course</h3>
-            <p class="text-center fs-16 text-dark mb-5">Enroll in our Free 5-Day Sales Success Course to master
-                essential
-                sales techniques and boost
-                your results. Unlock your potential now!</p>
-
-            <div class="input-group rounded-0 mb-3">
-                <input type="text" class="form-control rounded-0" placeholder="Your Email"
-                    aria-label="Recipient's username" aria-describedby="basic-addon2">
-                <span class="input-group-text rounded-0" id="basic-addon2">Submit</span>
+    <section class="email-signup mb-0">
+        <div class="flex">
+            <div class="graphics position-relative">
+                <img class="bg-img" src="/img/patternpad.png" alt="">
+                <img class="subject-img" src="/img/simone-wide.jpg" alt="">
+            </div>
+            <div class="info-div">
+                <div class="input-section">
+                    <h3 class="header-email text-start">Signup or Free 5 Day Sales Success Course</h3>
+                    <div class="input-group rounded-0 mb-3">
+                        <input type="text" class="form-control rounded-0" placeholder="Your Email"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <span class="input-group-text rounded-0" id="basic-addon2">Submit</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -759,7 +751,6 @@
     <!-- About Us -->
     <section class="about-us">
         <div class="container">
-            <h3 class="header header-element text-white">About Us</h3>
             <div class="full-width-img">
                 <img src="/img/simone-wide.jpg" alt="">
             </div>
@@ -829,7 +820,8 @@
     </section>
 
     <!-- Free Zoom Coaching -->
-    <section class="zoom-coaching border-3 border-top border-secondary"> <!-- mb-0 border-bottom border-secondary border-4-->
+    <section class="zoom-coaching mb-0 border-3 border-bottom border-top border-secondary">
+        <!-- mb-0 border-bottom border-secondary border-4-->
         <div class="container">
             <div class="flex">
                 <div class="info-div">
@@ -861,14 +853,6 @@
                     </svg>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="cta">
-        <div class="container">
-            <h5>
-                CTA 
-            </h5>
         </div>
     </section>
 
@@ -917,7 +901,8 @@
                     <div class="input-group rounded-0 mb-3">
                         <input type="text" class="form-control rounded-0" placeholder="Your Email"
                             aria-label="Recipient's username" aria-describedby="basic-addon2">
-                        <span class="input-group-text bg-secondary fw-600 text-white rounded-0" id="basic-addon2">Submit</span>
+                        <span class="input-group-text bg-secondary fw-600 text-white rounded-0"
+                            id="basic-addon2">Submit</span>
                     </div>
                 </div>
             </div>

@@ -106,6 +106,10 @@
     font-size: 18px;
     font-weight: 600;
 
+    @media (max-width: 992px) {
+      background: linear-gradient(90deg, rgba(6, 98, 110, 0.7) -12.74%, rgba(2, 84, 104, 0.471) 56.76%);
+    }
+
     &:before {
         content: "";
         width: 4px;

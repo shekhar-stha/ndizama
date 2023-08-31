@@ -1,4 +1,3 @@
-
 nav {
     background-color: #ffffff;
     position: relative;
@@ -30,6 +29,22 @@ nav {
         }
     }
 
+    .nav-button {
+        a {
+            min-width: 13rem;
+        }
+
+        @media (max-width: 1200px) {
+            display: flex;
+            width: 100%;
+            margin-left: none;
+            a{
+                min-width: auto;
+                width: 100%;
+            }
+        }
+    }
+
     ul {
         display: flex;
         align-items: center;
@@ -50,6 +65,8 @@ nav {
 
                 @media (max-width: 1200px) {
                     text-align: center;
+                    color: $dark;
+                    font-weight: 600;
                 }
 
                 &::after {
@@ -96,95 +113,6 @@ nav {
         .nav-button {
             @media (max-width: 1200px) {
                 width: 100%;
-            }
-        }
-    }
-}
-
-.top-information {
-
-    .wrapper {
-        display: inline-flex;
-        list-style: none;
-        width: 100%;
-        font-family: "Poppins", sans-serif;
-        justify-content: center;
-
-        .icon {
-            position: relative;
-            background: #fff;
-            border-radius: 50%;
-            margin: 0px 10px;
-            width: 35px;
-            height: 35px;
-            font-size: 16px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-            .tooltip {
-                position: absolute;
-                bottom: 0;
-                font-size: 14px;
-                background: #fff;
-                color: #fff;
-                padding: 5px 8px;
-                border-radius: 5px;
-                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-                opacity: 0;
-                pointer-events: none;
-                transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-                &::before {
-                    position: absolute;
-                    content: "";
-                    height: 8px;
-                    width: 8px;
-                    background: #fff;
-                    top: -3px;
-                    left: 50%;
-                    transform: translate(-50%) rotate(45deg);
-                    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-                }
-            }
-
-            &:hover {
-                .tooltip {
-                    bottom: -45px;
-                    opacity: 1;
-                    visibility: visible;
-                    pointer-events: auto;
-                }
-
-                span,
-                .tooltip {
-                    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-                }
-            }
-
-            &.facebook:hover,
-            &.facebook:hover .tooltip,
-            &.facebook:hover .tooltip::before {
-                background: #1877F2;
-                color: #fff;
-            }
-
-            &.twitter:hover,
-            &.twitter:hover .tooltip,
-            &.twitter:hover .tooltip::before {
-                background: #1DA1F2;
-                color: #fff;
-            }
-
-            &.instagram:hover,
-            &.instagram:hover .tooltip,
-            &.instagram:hover .tooltip::before {
-                background: #E4405F;
-                color: #fff;
             }
         }
     }
