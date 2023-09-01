@@ -118,7 +118,8 @@
                     @media (max-width: 992px) {
                         line-height: inherit;
                     }
-                    mark{
+
+                    mark {
                         font-weight: 800;
                         letter-spacing: 1.2px;
                     }
@@ -488,7 +489,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
+                cursor: pointer;
                 img {
                     width: 4rem;
                 }
@@ -715,6 +716,17 @@
                 position: absolute;
                 z-index: -1;
                 top: -1%;
+                @media (max-width: 768px) {
+                    top: 3%;
+                }
+                @media (max-width: 576px) {
+                    top: 5%;
+                    font-size: 65px;
+                }
+                @media (max-width: 400px) {
+                    top: 13%;
+                    font-size: 45px;
+                }
             }
         }
 
@@ -803,57 +815,49 @@
 
     .column {
         width: 100%;
-        text-align: center;
+        background-color: $white;
+        position: relative;
+        overflow: visible !important;
 
-        .img-div {
+        &::after {
+            content: "";
+            background-color: $secondary-light ;
+            position: absolute;
             width: 100%;
-            margin-bottom: 3rem;
-            position: relative;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transition: all ease-in 0.3s;
+            z-index: -1;
+            // margin: 0 20px;
+        }
 
-            img {
-                width: 90%;
-                margin: 0 auto;
-                height: 20rem;
-                object-fit: contain;
-            }
-
-            .blob {
-                position: relative;
-                padding-bottom: 3rem;
-                // svg {
-                //     position: absolute;
-                //     width: 120%;
-                //     bottom: -20%;
-                //     left: -10%;
-                //     z-index: -1;
-
-                //     @media (min-width: 1400px) {
-                //         width: 110%;
-                //         left: -7%;
-                //         bottom: -25%;
-                //     }
-                // }
-                svg {
-                    display: none;
-                }
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    width: 100%;
-                    height: 11rem;
-                    background-color: $secondary;
-                    bottom: 40%;
-                    left: 0;
-                    z-index: -1;
-                }
+        &:hover {
+            &::after {
+                left: 5%;
             }
         }
 
-        .name {
-            font-size: 26px;
-            color: $white;
-            font-weight: 600;
+        .img-div {
+            width: 100%;
+            position: relative;
+
+            img {
+                width: 100%;
+                margin: 0 auto;
+                height: 15rem;
+                object-fit: cover;
+            }
+        }
+
+        .info-div {
+            padding: 1rem;
+
+            .name {
+                font-size: 18px;
+                color: $dark;
+                font-weight: 600;
+            }
         }
     }
 
@@ -1296,9 +1300,8 @@ footer {
 
             .footer-logo {
                 width: 80%;
-                @media (max-width) {
-                    
-                }
+
+                @media (max-width) {}
             }
 
             .footer-description {
@@ -1369,33 +1372,36 @@ footer {
                     text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
                 }
 
-                .wrapper .facebook {
+                .wrapper .facebook, .wrapper .facebook a {
                     color: #1877F2;
                 }
 
                 .wrapper .facebook:hover,
+                .wrapper .facebook:hover a,
                 .wrapper .facebook:hover .tooltip,
                 .wrapper .facebook:hover .tooltip::before {
                     background: #1877F2;
                     color: #fff;
                 }
 
-                .wrapper .twitter {
+                .wrapper .twitter, .wrapper .twitter a {
                     color: #1DA1F2;
                 }
 
                 .wrapper .twitter:hover,
+                .wrapper .twitter:hover a,
                 .wrapper .twitter:hover .tooltip,
                 .wrapper .twitter:hover .tooltip::before {
                     background: #1DA1F2;
                     color: #fff;
                 }
 
-                .wrapper .instagram {
+                .wrapper .instagram, .wrapper .instagram a {
                     color: #E4405F;
                 }
 
                 .wrapper .instagram:hover,
+                .wrapper .instagram:hover a,
                 .wrapper .instagram:hover .tooltip,
                 .wrapper .instagram:hover .tooltip::before {
                     background: #E4405F;

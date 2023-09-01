@@ -259,6 +259,7 @@ section {
     text-transform: capitalize;
     margin-bottom: 2rem;
     text-align: center;
+
     // font-family: 'Abril Fatface', cursive;
     mark {
         font-weight: 900;
@@ -278,7 +279,7 @@ section {
         left: 0%;
         top: 47%;
 
-        @media (max-width: 992px) {
+        @media (max-width: 1200px) {
             display: none;
         }
     }
@@ -292,7 +293,7 @@ section {
         right: 0%;
         top: 47%;
 
-        @media (max-width: 992px) {
+        @media (max-width: 1200px) {
             display: none;
         }
     }

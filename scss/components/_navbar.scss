@@ -1,15 +1,14 @@
 nav {
-    background-color: #ffffff;
     position: relative;
     padding: 1.5rem 0 !important;
 
-    @media (max-width: 576px) {
-        height: 7rem;
+    @media (max-width: 768px) {
+       background-color: rgb(0, 31, 43, 0.7);
     }
 
 
     .navbar-brand {
-        @media (max-width: 270px) {
+        @media (max-width: 350px) {
             max-width: calc(100% - 5rem);
         }
 
@@ -19,11 +18,11 @@ nav {
 
 
             @media (max-width: 576px) {
-                width: 13rem;
+                width: 16rem;
                 top: 1rem;
             }
 
-            @media (max-width: 270px) {
+            @media (max-width: 350px) {
                 width: 100%
             }
         }
