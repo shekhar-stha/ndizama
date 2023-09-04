@@ -1,3 +1,13 @@
+.inner-nav-hero {
+    min-height: auto !important;
+
+    &::after {
+        @media (max-width: 992px) {
+            background: radial-gradient(circle, hsla(197, 100%, 8%, 1) 0%, hsla(197, 100%, 8%, 1) 0%, hsla(197, 100%, 8%, 1) 23%, hsla(197, 90%, 12%, 1) 97%) !important;
+        }
+    }
+}
+
 .nav-hero {
     position: relative;
     min-height: 100vh;
@@ -46,27 +56,16 @@
     &::after {
         content: "";
         position: absolute;
-        background: hsla(197, 100%, 8%, 1);
-
-        background: radial-gradient(circle, hsla(197, 100%, 8%, 1) 0%, hsla(197, 100%, 8%, 1) 0%, hsla(197, 100%, 8%, 1) 23%, hsla(197, 90%, 12%, 1) 97%);
-
-        background: -moz-radial-gradient(circle, hsla(197, 100%, 8%, 1) 0%, hsla(197, 100%, 8%, 1) 0%, hsla(197, 100%, 8%, 1) 23%, hsla(197, 90%, 12%, 1) 97%);
-
-        background: -webkit-radial-gradient(circle, hsla(197, 100%, 8%, 1) 0%, hsla(197, 100%, 8%, 1) 0%, hsla(197, 100%, 8%, 1) 23%, hsla(197, 90%, 12%, 1) 97%);
-
-        // background: hsla(197, 100%, 8%, 1);
-
-        // background: radial-gradient(circle, hsla(197, 100%, 8%, 1) 0%, hsla(197, 100%, 8%, 1) 0%, hsla(198, 85%, 11%, 1) 26%, hsla(197, 100%, 8%, 1) 100%);
-
-        // background: -moz-radial-gradient(circle, hsla(197, 100%, 8%, 1) 0%, hsla(197, 100%, 8%, 1) 0%, hsla(198, 85%, 11%, 1) 26%, hsla(197, 100%, 8%, 1) 100%);
-
-        // background: -webkit-radial-gradient(circle, hsla(197, 100%, 8%, 1) 0%, hsla(197, 100%, 8%, 1) 0%, hsla(198, 85%, 11%, 1) 26%, hsla(197, 100%, 8%, 1) 100%);
-
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         z-index: -2;
+
+        /* Define the initial background gradient */
+        background: radial-gradient(circle, hsla(197, 100%, 8%, 1) 0%, hsla(197, 100%, 8%, 1) 0%, hsla(197, 100%, 8%, 1) 23%, hsla(197, 90%, 12%, 1) 97%);
+        // animation: wavyBackground 6s infinite linear;
+
 
         @media (max-width: 992px) {
             background: hsla(197, 100%, 8%, 0.8);
@@ -104,6 +103,14 @@
 
                 @media (max-width: 992px) {
                     width: 100%;
+                }
+
+                .inner-page-header {
+                    font-size: 50px;
+                    text-align: center;
+                    font-weight: 800 !important;
+                    letter-spacing: 1.5px;
+                    text-transform: uppercase;
                 }
 
                 h1 {
@@ -1028,7 +1035,11 @@
             h6 {
                 font-size: 45px;
                 font-weight: 800;
-                color: $secondary-light ;
+                color: $secondary-light;
+
+                @media (max-width: 576px) {
+                    font-size: 40px;
+                }
             }
         }
 
@@ -1213,6 +1224,10 @@
                 font-size: 45px;
                 font-weight: 800;
                 color: $secondary-light ;
+
+                @media (max-width: 576px) {
+                    font-size: 40px;
+                }
             }
         }
 

@@ -593,7 +593,7 @@
 }));
 
 
-$(function() {
+$(function () {
   AOS.init();
 });
 window.addEventListener('load', AOS.refresh)
@@ -713,3 +713,4 @@ document.addEventListener("DOMContentLoaded", function () {
     column.style.height = maxHeight + "px";
   });
 });
+

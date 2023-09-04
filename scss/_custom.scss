@@ -58,6 +58,14 @@ $grid-breakpoints: (
     font-weight: 700;
 }
 
+.fw-800 {
+    font-weight: 800;
+}
+
+.fw-900 {
+    font-weight: 900;
+}
+
 .fs-14 {
     font-size: 14px;
 }
@@ -266,6 +274,11 @@ section {
         background-color: $secondary;
         color: $white;
         letter-spacing: 2.7px;
+        line-height: 65px;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 40px;
     }
 }
 
