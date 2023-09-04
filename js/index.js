@@ -679,12 +679,34 @@ const showMoreButton = document.getElementById('show-more-ep');
 showMoreButton.addEventListener('click', () => {
   const collapsedClass = 'collapsed';
   const moreEp = document.getElementById('moreEp');
-  
+
   if (showMoreButton.classList.contains(collapsedClass)) {
     showMoreButton.innerText = 'Show More';
   } else {
     showMoreButton.innerText = 'Show Less';
   }
-  
+
   showMoreButton.classList.toggle(collapsedClass);
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Get all elements with the "column" class
+  var testimonials = document.querySelector(".success-stories");
+  var columns = testimonials.querySelectorAll(".column");
+
+  // Find the maximum height among the columns
+  var maxHeight = 0;
+
+  columns.forEach(function (column) {
+    var columnHeight = column.clientHeight;
+    if (columnHeight > maxHeight) {
+      maxHeight = columnHeight;
+    }
+  });
+
+  // Set the height of all columns to the maximum height
+  columns.forEach(function (column) {
+    column.style.height = maxHeight + "px";
+  });
 });

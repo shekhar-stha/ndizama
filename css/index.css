@@ -13760,9 +13760,10 @@ nav ul .nav-item .nav-link .dropdown-item {
 }
 .marquee-section .marquee .marquee_group img {
   mix-blend-mode: multiply;
-  filter: contrast(1);
   width: 12rem;
+  height: 13rem;
   object-fit: contain;
+  filter: saturate(0%);
 }
 
 .success-stories {
@@ -14383,6 +14384,7 @@ nav ul .nav-item .nav-link .dropdown-item {
   height: 25rem;
   object-fit: cover;
   position: relative;
+  z-index: 2;
 }
 .about-us .full-width-img::after {
   content: " ";
@@ -14392,7 +14394,6 @@ nav ul .nav-item .nav-link .dropdown-item {
   top: 2rem;
   left: 2rem;
   border: 6px solid #7adbf3;
-  z-index: -1;
 }
 .about-us .flex {
   display: flex;
@@ -14726,7 +14727,8 @@ footer .flex .column .social-media-links .wrapper .icon:hover span,
 footer .flex .column .social-media-links .wrapper .icon:hover .tooltip {
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
 }
-footer .flex .column .social-media-links .wrapper .facebook, footer .flex .column .social-media-links .wrapper .facebook a {
+footer .flex .column .social-media-links .wrapper .facebook,
+footer .flex .column .social-media-links .wrapper .facebook a {
   color: #1877F2;
 }
 footer .flex .column .social-media-links .wrapper .facebook:hover,
@@ -14736,7 +14738,8 @@ footer .flex .column .social-media-links .wrapper .facebook:hover .tooltip::befo
   background: #1877F2;
   color: #fff;
 }
-footer .flex .column .social-media-links .wrapper .twitter, footer .flex .column .social-media-links .wrapper .twitter a {
+footer .flex .column .social-media-links .wrapper .twitter,
+footer .flex .column .social-media-links .wrapper .twitter a {
   color: #1DA1F2;
 }
 footer .flex .column .social-media-links .wrapper .twitter:hover,
@@ -14746,7 +14749,8 @@ footer .flex .column .social-media-links .wrapper .twitter:hover .tooltip::befor
   background: #1DA1F2;
   color: #fff;
 }
-footer .flex .column .social-media-links .wrapper .instagram, footer .flex .column .social-media-links .wrapper .instagram a {
+footer .flex .column .social-media-links .wrapper .instagram,
+footer .flex .column .social-media-links .wrapper .instagram a {
   color: #E4405F;
 }
 footer .flex .column .social-media-links .wrapper .instagram:hover,
