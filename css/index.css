@@ -13646,7 +13646,7 @@ nav ul .nav-item .active::after {
 .nav-hero .hero .hero-flex .info-side h1, .nav-hero .hero .hero-flex .info-side .h1 {
   font-size: 48px;
   color: #f8f8f8;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 3rem;
   width: 100%;
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
@@ -13656,10 +13656,6 @@ nav ul .nav-item .active::after {
   .nav-hero .hero .hero-flex .info-side h1, .nav-hero .hero .hero-flex .info-side .h1 {
     line-height: inherit;
   }
-}
-.nav-hero .hero .hero-flex .info-side h1 mark, .nav-hero .hero .hero-flex .info-side .h1 mark, .nav-hero .hero .hero-flex .info-side h1 .mark, .nav-hero .hero .hero-flex .info-side .h1 .mark {
-  font-weight: 800;
-  letter-spacing: 1.2px;
 }
 @media (max-width: 768px) {
   .nav-hero .hero .hero-flex .info-side h1, .nav-hero .hero .hero-flex .info-side .h1 {
