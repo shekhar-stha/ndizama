@@ -596,7 +596,13 @@
 $(function () {
   AOS.init();
 });
-window.addEventListener('load', AOS.refresh)
+
+if (window.hsInEditor) {
+  AOS.init({ disable: true });
+  document.querySelectorAll("*").removeAttribute("data-oas");
+} else {
+  AOS.init();
+}
 
 
 $('.services-grid').slick({

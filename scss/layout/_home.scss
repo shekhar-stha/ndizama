@@ -1213,7 +1213,7 @@
         }
 
         .info-div {
-            width: 42%;
+            width: 48%;
             color: $white;
 
             @media (max-width: 1200px) {
@@ -1232,8 +1232,7 @@
         }
 
         .img-div {
-            position: relative;
-            width: 56%;
+            width: 50%;
             height: fit-content;
 
             @media (max-width: 1200px) {
@@ -1243,8 +1242,7 @@
             }
 
             .left-img {
-                position: absolute;
-                width: 60%;
+                width: 100%;
                 object-fit: cover;
 
                 @media (max-width: 1200px) {
@@ -1252,26 +1250,6 @@
                     width: 100%;
                     max-height: 20rem;
                 }
-            }
-
-            .right-img {
-                position: absolute;
-                width: 43%;
-                right: 0;
-                top: 10%;
-                object-fit: cover;
-
-                @media (max-width: 1200px) {
-                    display: none;
-                }
-            }
-
-            svg {
-                position: absolute;
-                width: 70%;
-                z-index: -1;
-                left: 30%;
-                bottom: -10%;
             }
         }
     }
@@ -1308,7 +1286,17 @@ footer {
             .footer-head {
                 font-size: 24px;
                 font-weight: 600;
-                margin-bottom: 1rem;
+                margin-bottom: 1.3rem;
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content: "";
+                    background-color: $secondary;
+                    width: 3rem;
+                    height: 3px;
+                    bottom: -7px;
+                    left: 0%;
+                }
             }
 
             .navigation-menu {
@@ -1317,6 +1305,10 @@ footer {
                 font-weight: 600;
                 color: $white;
                 margin-bottom: 1rem;
+                transition: all 0.3s;
+                &:hover{
+                    padding-left: 0.5rem;
+                }
             }
 
             .footer-logo {
