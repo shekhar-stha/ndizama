@@ -262,15 +262,14 @@ section {
 
 .header {
     font-size: 45px;
-    font-weight: 700;
+    font-weight: 400;
     position: relative;
     text-transform: capitalize;
     margin-bottom: 2rem;
     text-align: center;
 
-    // font-family: 'Abril Fatface', cursive;
     mark {
-        font-weight: 900;
+        font-weight: 600;
         background-color: $secondary;
         color: $white;
         letter-spacing: 2.7px;
