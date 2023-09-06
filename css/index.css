@@ -15779,12 +15779,34 @@ footer .flex .column .social-media-links .wrapper .instagram:hover .tooltip::bef
 
 .stream-link {
   background-color: #7adbf3;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   justify-content: space-around;
   margin-bottom: 4rem;
+  padding: 0 3rem;
+}
+@media (max-width: 992px) {
+  .stream-link {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .stream-link {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .stream-link {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.stream-link a {
+  display: flex;
+  justify-content: center;
 }
 .stream-link a img {
   max-width: 10rem;
+  margin: 0 auto;
 }
 
 .lb-loader,
