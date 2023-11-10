@@ -1239,6 +1239,7 @@
                 height: 25rem;
                 object-fit: contain;
                 z-index: 2;
+                
 
                 @media (max-width: 768px) {
                     max-height: 20rem;
@@ -1404,7 +1405,7 @@ footer {
 
                     @media (max-width: 768px) {
                         left: 0%;
-                        transform: inherit;
+                        transform: inherit
                     }
                 }
             }
