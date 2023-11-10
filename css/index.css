@@ -14295,13 +14295,27 @@ nav ul .nav-item .active::after {
   font-size: 14px;
   font-weight: 500;
 }
-.podcasts .flex .last-episodes .episode .info-div div a {
+.podcasts .flex .last-episodes .episode .info-div div .play-inside {
   background-color: #0d7994;
   font-size: 18px;
-  padding: 0.8rem 1rem;
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
   color: #f8f8f8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.podcasts .flex .last-episodes .episode .info-div div a:hover i {
+.podcasts .flex .last-episodes .episode .info-div div .play-inside a {
+  color: #f8f8f8;
+  height: fit-content;
+}
+.podcasts .flex .last-episodes .episode .info-div div .play-inside a i {
+  font-size: 18px;
+}
+.podcasts .flex .last-episodes .episode .info-div div .play-inside:hover i {
   padding-left: none !important;
 }
 
@@ -14726,7 +14740,7 @@ footer {
 }
 footer .flex {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 @media (max-width: 1200px) {
@@ -14764,7 +14778,14 @@ footer .flex .column .footer-head::after {
   width: 3rem;
   height: 3px;
   bottom: -7px;
-  left: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 768px) {
+  footer .flex .column .footer-head::after {
+    left: 0%;
+    transform: inherit;
+  }
 }
 footer .flex .column .navigation-menu {
   color: #f8f8f8;

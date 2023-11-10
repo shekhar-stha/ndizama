@@ -864,11 +864,25 @@
                     }
 
                     div {
-                        a {
+                        .play-inside {
                             background-color: $secondary;
                             font-size: 18px;
-                            padding: 0.8rem 1rem;
+                            width: 2.5rem !important;
+                            height: 2.5rem !important;
+                            min-width: 2.5rem;
+                            min-height: 2.5rem;
                             color: $white;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            a {
+                                color: $white;
+                                height: fit-content;
+                                i{
+                                    font-size: 18px;
+                                }
+                            }
 
                             &:hover {
                                 i {
@@ -1350,7 +1364,7 @@ footer {
 
     .flex {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
 
         @media (max-width: 1200px) {
@@ -1385,7 +1399,13 @@ footer {
                     width: 3rem;
                     height: 3px;
                     bottom: -7px;
-                    left: 0%;
+                    left: 50%;
+                    transform: translateX(-50%);
+
+                    @media (max-width: 768px) {
+                        left: 0%;
+                        transform: inherit;
+                    }
                 }
             }
 
